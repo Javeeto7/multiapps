@@ -12,7 +12,7 @@ Pull this package in through Composer.
 ```js
 {
     "require": {
-        "reivaj86/appls": "1.0.*"
+        "reivaj86/appls": "dev-master"
     }
 }
 ```
