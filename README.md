@@ -1,6 +1,6 @@
 # Multiapps for Laravel 5
 
-Simple Laravel 5 package for handling access to child-applications (appls) within a main-application.
+Simple Laravel 5 package for handling access to child-applications (Appls) within a main-application. Each Appl can be seen as a Moudle or Package within the Main APP. With this package you can grant or ungrant access to every single application, attaching or dettaching appls from a user.
    
     Main App. //with 2 child apps
 	 -->Appl_1. 
