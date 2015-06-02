@@ -3,12 +3,15 @@
 Simple Laravel 5 package for handling access to child-applications (Appls) within a main-application. Each Appl can be seen as a Moudle or Package within the Main APP. With this package you can grant or ungrant access to every single application, attaching or dettaching appls from a user.
    
     Main App. //with 2 child apps
-	 -->Appl_1. 
-	 -->Appl_2.
+	 -->Appl_1. (Module 1)
+	 -->Appl_2. (Module 2)
+	 .....
+	 
+
 ...
 ## Installation
 
-Pull this package  through Composer. composer.json
+Pull this package through Composer. ---- composer.json
 
 ```js
 {
