@@ -17,7 +17,7 @@ Pull this package  through Composer. composer.json
 }
 ```
 Run
-    $ composer update
+	 $ composer update
 
 Add the package to your application service providers in: `config/app.php`
 
@@ -47,11 +47,11 @@ Run migrations.
 Crate your seeds // optional
 Run the seeder
 
----- Configuration file ---- config.php
+### Configuration file ---- config.php
 
 You can change the connection for your models, slug separator and there is also a very userfull pretend option. View the config file for more information.
 
----- Usage ---- IsApplUser trait & IsApplUserContract
+### Usage ---- IsApplUser trait & IsApplUserContract
 
 First of all, include `IsApplUser` trait and also implement `IsApplUserContract` inside your `User`model or `Custom` model.
 
@@ -124,7 +124,7 @@ This option is very usefull when you want to set access levels to every child ap
 If user has multiple child apps, the method `level` returns the leve for that appl. For a basic User it shall always be 1. 
 
 
---- Blade Extensions ---- @appl & @uses & @allowed
+### Blade Extensions ---- @appl & @uses & @allowed
 
 There are three Blade extensions. Basically, it is replacement for classic if statements.
 
