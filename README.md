@@ -1,8 +1,8 @@
 # Multiapps for Laravel 5
 
 Simple Laravel 5 package for handling access to child-applications (appls) within a main-application.
+   
     Main App. //with 2 child apps
-    
 	 -->Appl_1. 
 	 -->Appl_2.
 ...
