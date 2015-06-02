@@ -1,9 +1,9 @@
 # Multiapps for Laravel 5
 
-Simple Laravel 5 package for handling access to child-applications within a main-application.
-Main App
--->App1
--->App2
+Simple Laravel 5 package for handling access to child-applications (appls) within a main-application.
+   Main App. //with 2 child apps
+	-->App1.
+	-->App2.
 ...
 ## Installation
 
@@ -120,8 +120,8 @@ if ($user->level() > 3)
     // code
 }
 ```
-This option is very usefull when you want to set access levels to every app. You can easily integrate this with a Role and level authentication package.
-If user has multiple appls, the method `level` returns the leve for that appl. For a basic User it shall always be 1. 
+This option is very usefull when you want to set access levels to every child app. You can easily integrate this with a Role and level authentication package.
+If user has multiple child apps, the method `level` returns the leve for that appl. For a basic User it shall always be 1. 
 
 
 --- Blade Extensions ---- @appl & @uses & @allowed
@@ -144,5 +144,5 @@ There are three Blade extensions. Basically, it is replacement for classic if st
 @endappl
 ```
 
-For more information, please have a look at [IsApplUserContract](https://github.com/reivaj86/multiapps/blob/master/src/Reivaj86/Multiapps/Contracts/IsApplUserContract.php).
+For a better understanding, please have a look at [IsApplUserContract](https://github.com/reivaj86/multiapps/blob/master/src/Reivaj86/Multiapps/Contracts/IsApplUserContract.php).
 
