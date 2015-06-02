@@ -144,5 +144,5 @@ There are three Blade extensions. Basically, it is replacement for classic if st
 @endappl
 ```
 
-For more information, please have a look at [IsApplUserContract](https://github.com/reivaj86/multiapps/blob/master/src/Reivaj86/Multiapps/Contracts/IsApplUSerContract.php).
+For more information, please have a look at [IsApplUserContract](https://github.com/reivaj86/multiapps/blob/master/src/Reivaj86/Multiapps/Contracts/IsApplUserContract.php).
 
