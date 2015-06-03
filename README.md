@@ -128,7 +128,7 @@ This option is very usefull when you want to set access levels to every child ap
 If user has multiple child apps, the method `level` returns the leve for that appl. For a basic User it shall always be 1. 
 
 
-### Blade Extensions ---- @appl & @uses & @allowed
+### Blade Extensions ---- @appl & @uses & @allowedappl
 
 There are three Blade extensions. Basically, it is replacement for classic if statements.
 
@@ -137,9 +137,9 @@ There are three Blade extensions. Basically, it is replacement for classic if st
     // user can use child_app_slug
 @endappl
 
-@allowed('child_app_slug', $view) // @if(Auth::check() && Auth::user()->allowed('child_app', $view))
+@allowedappl('child_app_slug', $view) // @if(Auth::check() && Auth::user()->allowed('child_app', $view))
     // show child_app specific content // Access to specific content within the child_app
-@endallowed
+@endallowedappl
 
 @appl('child_app_1|child_app_2', 'all') // @if(Auth::check() && Auth::user()->can('child_app_1|child_app_2', 'all'))
     // user can use child_app_1 and also child_app_2
