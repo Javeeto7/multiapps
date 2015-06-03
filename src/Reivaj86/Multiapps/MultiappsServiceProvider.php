@@ -55,13 +55,6 @@ class MultiappsServiceProvider extends ServiceProvider
             return preg_replace($pattern, '<?php endif; ?>', $view);
         });
         
-        $blade->extend(function ($view, $compiler) {
-            $pattern = $compiler->createMatcher('usesappl');
-            return preg_replace($pattern, '<?php if (Auth::check() && Auth::user()->allowed$2): ?> ', $view);
-        });
-        $blade->extend(function ($view, $compiler) {
-            $pattern = $compiler->createPlainMatcher('endusesappl');
-            return preg_replace($pattern, '<?php endif; ?>', $view);
         });
 
         $blade->extend(function ($view, $compiler) {
