@@ -1,6 +1,6 @@
 <?php
 
-namespace Reivaj\Multiapps\Exceptions;
+namespace Reivaj86\Multiapps\Exceptions;
 
 use Exception;
 
