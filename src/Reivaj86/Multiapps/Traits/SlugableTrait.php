@@ -1,6 +1,6 @@
 <?php
 
-namespace Bican\Roles\Traits;
+namespace Reivaj86\Multiapps\Traits;
 
 trait SlugableTrait
 {
