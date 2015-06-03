@@ -56,13 +56,13 @@ class MultiappsServiceProvider extends ServiceProvider
         });
 
         $blade->extend(function ($view, $compiler) {
-            $pattern = $compiler->createMatcher('allowed');
+            $pattern = $compiler->createMatcher('allowedappl');
 
             return preg_replace($pattern, '<?php if (Auth::check() && Auth::user()->allowed$2): ?> ', $view);
         });
 
         $blade->extend(function ($view, $compiler) {
-            $pattern = $compiler->createPlainMatcher('endallowed');
+            $pattern = $compiler->createPlainMatcher('endallowedappl');
 
             return preg_replace($pattern, '<?php endif; ?>', $view);
         });
