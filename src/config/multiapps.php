@@ -44,7 +44,7 @@ return [
         'enabled' => false,
 
         'options' => [
-            'can'       => true,
+            'uses'       => true,
             'allowed'   => true,
         ],
 
