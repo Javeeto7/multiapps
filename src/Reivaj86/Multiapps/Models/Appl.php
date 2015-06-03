@@ -2,7 +2,7 @@
 
 namespace Reivaj86\Multiapps\Models;
 
-use Reivaj\Multiapps\Contracts\ApplContract;
+use Reivaj86\Multiapps\Contracts\ApplContract;
 use Reivaj86\Multiapps\ApplTrait;
 use Reivaj86\Multiapps\SlugableTrait;
 use Illuminate\Database\Eloquent\Model;
