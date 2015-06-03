@@ -54,8 +54,6 @@ class MultiappsServiceProvider extends ServiceProvider
 
             return preg_replace($pattern, '<?php endif; ?>', $view);
         });
-        
-        });
 
         $blade->extend(function ($view, $compiler) {
             $pattern = $compiler->createMatcher('allowedappl');
