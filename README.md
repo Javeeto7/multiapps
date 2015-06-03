@@ -16,7 +16,7 @@ Pull this package through Composer. ---- composer.json
 ```js
 {
     "require": {
-        "reivaj86/appls": "dev-master"
+        "reivaj86/multiapps": "dev-master"
     }
 }
 ```
