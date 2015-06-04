@@ -58,7 +58,7 @@ interface IsApplUserContract
      * @return int
      * @throws \Reivaj86\Multiapps\Exceptions\RoleNotFoundException
      */
-    public function level($appl);
+    public function ApplLevel($appl);
 
     /**
      * Get max appls level for a comon user. //Should always be 1. Admin level > 1
@@ -66,7 +66,7 @@ interface IsApplUserContract
      * @return int
      * @throws \Reivaj86\Multiapps\Exceptions\RoleNotFoundException
      */
-    public function levelMax();
+    public function ApplLevelMax();
 
     /**
      * Check if the user is allowed to manipulate with entity.//Activated or Blocked action
