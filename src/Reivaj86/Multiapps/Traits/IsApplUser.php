@@ -230,7 +230,7 @@ trait IsApplUser
     {
         if (starts_with($method, 'uses')) {
             return $this->uses(snake_case(substr($method, 2), config('multiapps.separator')));
-        } elseif (starts_with($method, 'allowedAppl')) {
+        } elseif (starts_with($method, 'allowed')) {
             return $this->allowedAppl(snake_case(substr($method, 7), config('multiapps.separator')), $parameters[0], (isset($parameters[1])) ? $parameters[1] : true, (isset($parameters[2])) ? $parameters[2] : 'user_id');
         }
 
