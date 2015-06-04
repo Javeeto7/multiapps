@@ -130,7 +130,7 @@ trait IsApplUser
      * @return int
      * @throws \Reivaj86\Multiapps\Exceptions\RoleNotFoundException
      */
-    public function level($appl)
+    public function applLevel($appl)
     {
         if ($appl_level = $this->getAppls()->contains($appl)->level) { return $appl_level; }
 
@@ -142,7 +142,7 @@ trait IsApplUser
      * @return int
      * @throws \Reivaj86\Multiapps\Exceptions\RoleNotFoundException
      */
-    public function levelMax()
+    public function ApplLevelMax()
     {
         if ($appl = $this->getAppls()->sortByDesc('level')->first()) { return $appl->level; }
 
@@ -158,9 +158,9 @@ trait IsApplUser
      * @param string $ownerColumn
      * @return bool
      */
-    public function allowed($providedAppl, $entity, $owner = true, $ownerColumn = 'user_id')
+    public function allowedAppl($providedAppl, $entity, $owner = true, $ownerColumn = 'user_id')
     {
-        if ($this->isPretendEnabled()) { return $this->pretend('allowed'); }
+        if ($this->isPurportEnabled()) { return $this->purport('allowedAppl'); }
 
         if ($owner === true && $entity->{$ownerColumn} == $this->id) { return true; }
 
@@ -174,24 +174,24 @@ trait IsApplUser
         return false;
     }
     /**
-     * Check if pretend option is enabled.
+     * Check if purport option is enabled.
      *
      * @return bool
      */
-    private function isPretendEnabled()
+    private function isPurportEnabled()
     {
-        return (bool) config('multiapps.pretend.enabled');
+        return (bool) config('multiapps.purport.enabled');
     }
 
     /**
-     * Allows to pretend or simulate package behavior.
+     * Allows to purport or simulate package behavior.
      *
      * @param string $option
      * @return bool
      */
-    private function pretend($option = null)
+    private function purport($option = null)
     {
-        return (bool) config('multiapps.pretend.options.' . $option);
+        return (bool) config('multiapps.purport.options.' . $option);
     }
 
     /**
@@ -200,7 +200,7 @@ trait IsApplUser
      * @param int|string|array $argument
      * @return array
      */
-    private function getArrayFrom($argument)
+    private function getApplArrayFrom($argument)
     {
         if (!is_array($argument)) { return preg_split('/ ?[,|] ?/', $argument); }
 
