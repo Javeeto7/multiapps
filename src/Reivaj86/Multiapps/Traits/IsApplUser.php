@@ -45,7 +45,7 @@ trait IsApplUser
      */
     public function uses($appl, $methodName = 'One')
     {
-        if ($this->isPretendEnabled()) { return $this->pretend('uses'); }
+        if ($this->isPurportEnabled()) { return $this->purport('uses'); }
 
         $this->checkApplMethodNameArgument($methodName);
 
@@ -142,7 +142,7 @@ trait IsApplUser
      * @return int
      * @throws \Reivaj86\Multiapps\Exceptions\RoleNotFoundException
      */
-    public function ApplLevelMax()
+    public function applLevelMax()
     {
         if ($appl = $this->getAppls()->sortByDesc('level')->first()) { return $appl->level; }
 
@@ -160,7 +160,7 @@ trait IsApplUser
      */
     public function allowedAppl($providedAppl, $entity, $owner = true, $ownerColumn = 'user_id')
     {
-        if ($this->isPurportEnabled()) { return $this->purport('allowedAppl'); }
+        if ($this->isPurportEnabled()) { return $this->purport('allowed'); }
 
         if ($owner === true && $entity->{$ownerColumn} == $this->id) { return true; }
 
