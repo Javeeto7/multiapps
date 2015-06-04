@@ -1,6 +1,6 @@
 <?php
 
-namespace Reivaj\Multiapps\Contracts;
+namespace Reivaj86\Multiapps\Contracts;
 
 interface ApplContract
 {
