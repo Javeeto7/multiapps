@@ -86,7 +86,7 @@ $user = User::find($id)->attachAppl($appl); // you can pass whole object, or jus
 You can easily check if the current user uses a child_app.
 
 ```php
-if ($user->can('child_app')) // you can pass an id or slug
+if ($user->uses('child_app')) // you can pass an id or slug
 {
     return 'child_app_slug';
 }
