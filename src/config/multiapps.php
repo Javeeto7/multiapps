@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'pretend' => [
+    'purport' => [
 
         'enabled' => false,
 
