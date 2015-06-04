@@ -226,7 +226,7 @@ trait IsApplUser
      * @param array $parameters
      * @return mixed
      */
-    public function __call($method, $parameters)
+    public function __callAppl($method, $parameters)
     {
         if (starts_with($method, 'uses')) {
             return $this->is(snake_case(substr($method, 2), config('multiapps.separator')));
@@ -234,6 +234,6 @@ trait IsApplUser
             return $this->allowed(snake_case(substr($method, 7), config('multiapps.separator')), $parameters[0], (isset($parameters[1])) ? $parameters[1] : true, (isset($parameters[2])) ? $parameters[2] : 'user_id');
         }
 
-        return parent::__call($method, $parameters);
+        return parent::__callAppl($method, $parameters);
     }
 }
