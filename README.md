@@ -53,7 +53,7 @@ Run the seeder
 
 ### Configuration file ---- config.php
 
-You can change the connection for your models, slug separator and there is also a very userfull pretend option. View the config file for more information.
+You can change the connection for your models, slug separator and there is also a very userfull purport option. View the config file for more information.
 
 ### Usage ---- IsApplUser trait & IsApplUserContract
 
