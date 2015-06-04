@@ -34,7 +34,7 @@ interface IsApplUserContract
      * @param int|\Reivaj86\Multiapps\Models\Role $role
      * @return null|bool
      */
-    public function attachApp($appl);
+    public function attachAppl($appl);
 
     /**
      * Detach app from a user.
@@ -42,14 +42,14 @@ interface IsApplUserContract
      * @param int|\Reivaj86\Multiapps\Models\Role $role
      * @return int
      */
-    public function detachApp($appl);
+    public function detachAppl($appl);
 
     /**
      * Detach all apps from a user. //Banned action
      *
      * @return int
      */
-    public function detachAllApps();
+    public function detachAllAppls();
 
     /**
      * Get app level of a user.
@@ -77,7 +77,7 @@ interface IsApplUserContract
      * @param string $ownerColumn
      * @return bool
      */
-    public function allowed($providedApp, $entity, $owner = true, $ownerColumn = 'user_id');
+    public function allowed($providedAppl, $entity, $owner = true, $ownerColumn = 'user_id');
 
 
 }
