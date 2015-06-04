@@ -3,8 +3,8 @@
 namespace Reivaj86\Multiapps\Models;
 
 use Reivaj86\Multiapps\Contracts\ApplContract;
-use Reivaj86\Multiapps\ApplTrait;
-use Reivaj86\Multiapps\SlugableTrait;
+use Reivaj86\Multiapps\Traits\ApplTrait;
+use Reivaj86\Multiapps\Traits\SlugableTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Appl extends Model implements ApplContract
