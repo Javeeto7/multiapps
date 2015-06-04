@@ -47,7 +47,7 @@ trait IsApplUser
     {
         if ($this->isPretendEnabled()) { return $this->pretend('uses'); }
 
-        $this->checkMethodNameArgument($methodName);
+        $this->checkApplMethodNameArgument($methodName);
 
         return $this->{'uses' . ucwords($methodName)}($this->getApplArrayFrom($appl));
     }
@@ -214,7 +214,7 @@ trait IsApplUser
      * @return void
      * @throws \Bican\Roles\Exceptions\InvalidArgumentException
      */
-    private function checkMethodNameArgument($methodName)
+    private function checkApplMethodNameArgument($methodName)
     {
         if (ucwords($methodName) != 'One' && ucwords($methodName) != 'All') {
             throw new InvalidArgumentException('You can pass only strings [one] or [all] as a second parameter in [is] or [can] method.');
