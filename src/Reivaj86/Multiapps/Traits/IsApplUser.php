@@ -49,7 +49,7 @@ trait IsApplUser
 
         $this->checkMethodNameArgument($methodName);
 
-        return $this->{'uses' . ucwords($methodName)}($this->getArrayFrom($appl));
+        return $this->{'uses' . ucwords($methodName)}($this->getApplArrayFrom($appl));
     }
 
     /**
