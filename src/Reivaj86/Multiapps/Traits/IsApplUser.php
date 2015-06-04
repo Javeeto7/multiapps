@@ -229,9 +229,9 @@ trait IsApplUser
     public function __callAppl($method, $parameters)
     {
         if (starts_with($method, 'uses')) {
-            return $this->is(snake_case(substr($method, 2), config('multiapps.separator')));
-        } elseif (starts_with($method, 'allowed')) {
-            return $this->allowed(snake_case(substr($method, 7), config('multiapps.separator')), $parameters[0], (isset($parameters[1])) ? $parameters[1] : true, (isset($parameters[2])) ? $parameters[2] : 'user_id');
+            return $this->uses(snake_case(substr($method, 2), config('multiapps.separator')));
+        } elseif (starts_with($method, 'allowedAppl')) {
+            return $this->allowedAppl(snake_case(substr($method, 7), config('multiapps.separator')), $parameters[0], (isset($parameters[1])) ? $parameters[1] : true, (isset($parameters[2])) ? $parameters[2] : 'user_id');
         }
 
         return parent::__callAppl($method, $parameters);
